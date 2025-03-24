@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ♟️ Chess PGN Reader
 
-## Getting Started
+A simple React + Next.js app that allows you to paste a PGN (Portable Game Notation) string, view the list of moves, and step through the game interactively on a chessboard. Built with `react-chessboard` and `chess.js`.
 
-First, run the development server:
+---
+
+## ✨ Features
+
+- 📥 Paste any valid PGN to parse a chess game
+- ⏮️ Step through moves using "Back" and "Next"
+- 🔁 Reset board at any time
+- 🔄 Flip board orientation (White or Black at bottom)
+- 🧾 Toggle PGN input visibility
+- 🚫 Displays error for invalid PGN strings
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/)
+- **UI**: [React](https://react.dev), [Tailwind CSS](https://tailwindcss.com)
+- **Chess Logic**: [chess.js](https://github.com/jhlywa/chess.js)
+- **Chessboard UI**: [react-chessboard](https://github.com/Clariity/react-chessboard)
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/chess-pgn-reader.git
+cd chess-pgn-reader
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Paste a valid PGN string (example below)
+2. Click "Next" to step forward, or "Back" to step backward through the moves
+3. Use "Reset" to return to the starting position
+4. Use "Flip board" to change orientation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Example PGN
 
-## Learn More
+```pgn
+[Event "Casual Game"]
+[Site "Berlin GER"]
+[Date "1852.??.??"]
+[Round "?"]
+[White "Adolf Anderssen"]
+[Black "Jean Dufresne"]
+[Result "1-0"]
 
-To learn more about Next.js, take a look at the following resources:
+1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.b4 Bxb4 5.c3 Ba5 6.d4 exd4 7.O-O d3 8.Qb3 Qf6 9.e5 Qg6 10.Re1 Nge7 11.Ba3 b5 12.Qxb5 Rb8 13.Qa4 Bb6 14.Nbd2 Bb7 15.Ne4 Qf5 16.Bxd3 Qh5 17.Nf6+ gxf6 18.exf6 Rg8 19.Rad1 Qxf3 20.Rxe7+ Nxe7 21.Qxd7+ Kxd7 22.Bf5+ Ke8 23.Bd7+ Kf8 24.Bxe7# 1-0
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
