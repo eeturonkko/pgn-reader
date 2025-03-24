@@ -20,8 +20,8 @@ export function PGNReader({
   setMoves: (moves: string[]) => void;
 }) {
   const [pgn, setPgn] = useState("");
-  const [toggle, setToggle] = useState(false);
   const [error, setError] = useState("");
+  const [toggle, setToggle] = useState(false);
   const [showStatus, setShowStatus] = useState("Hide");
 
   const handlePGNInput = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -71,8 +71,8 @@ export function PGNReader({
 }
 
 export function PGNBoard({ moves }: { moves: string[] }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [game, setGame] = useState(new Chess());
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [orientation, setOrientation] = useState<"white" | "black">("white");
 
   const applyMovesUpTo = (index: number) => {
